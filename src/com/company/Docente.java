@@ -2,7 +2,7 @@ package com.company;
 
 public class Docente extends Usuario{
 
-    private int anioInicio;
+    private int añoInicio;
     private int cantidadCursos;
 
 

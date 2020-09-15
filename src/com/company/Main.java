@@ -24,6 +24,8 @@ public class Main {
                 int opcion = Integer.parseInt(option);
                 switch (option) {
                     case "1":
+                        System.out.print("Ingrese directorio del CSV: ");
+                        String csvFile = sc.nextLine();
 
                         break;
                     case "2":
@@ -57,19 +59,19 @@ public class Main {
                                 break;
                             case "3":
 
-                        break;
-                    case "4":
+                                break;
+                            case "4":
 
-                        break;
-                    default:
-                        System.out.print("Opcion errada!");
-                        break;
-                }
+                                break;
+                            default:
+                                System.out.print("Opcion errada!");
+                                break;
+                        }
 
-            }catch (InputMismatchException e){
-                   System.out.print("Ingrese un numero!");
+                }catch(InputMismatchException e){
+                    System.out.print("Ingrese un numero!");
                     break;
-            }
+                }
 
 
         }

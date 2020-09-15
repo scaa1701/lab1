@@ -1,5 +1,9 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -23,6 +27,34 @@ public class Main {
                 int opcion = Integer.parseInt(option);
                 switch (option) {
                     case "1":
+                        BufferedReader br = null;
+                        try {
+
+                            System.out.print("Ingrese directorio del CSV: ");
+                            String line = "";
+                            String cvsSplitBy = ",";
+
+
+                            String csvFile = sc.nextLine();
+                            br = new BufferedReader(new FileReader(csvFile));
+                                // use comma as separator
+                                String[] usuariosCSV = line.split(cvsSplitBy);
+
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        } finally {
+                            if (br != null) {
+                                try {
+                                    br.close();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+
+
 
                         break;
                     case "2":

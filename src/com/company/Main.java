@@ -28,7 +28,7 @@ public class Main {
                         System.out.println("Ingrese si es Docente (1) o Personal Administrativo (2): ");
                         switch (sc.nextLine()) {
                             case "1":
-                                System.out.println("Ingrese si es Instructor (1), Jefe de Practica (2) o Profesor (3): ");
+                                System.out.print("Ingrese si es Instructor (1), Jefe de Practica (2) o Profesor (3): ");
                                 switch (sc.nextLine()) {
                                     case "1":
                                         Instructor u = new Instructor();
@@ -50,6 +50,7 @@ public class Main {
                                         u.setAnexo(Integer.parseInt(sc.nextLine()));
                                         System.out.print("Ingrese departamento: ");
                                         u.setDepartamento(sc.nextLine());
+                                        directorioTelefonico.getListaUsuarios().add(u);
                                         break;
                                     case "2":
                                         JefeDePractica jefeDePractica = new JefeDePractica();
@@ -71,6 +72,7 @@ public class Main {
                                         jefeDePractica.setAnexo(Integer.parseInt(sc.nextLine()));
                                         System.out.print("Ingrese departamento: ");
                                         jefeDePractica.setDepartamento(sc.nextLine());
+                                        directorioTelefonico.getListaUsuarios().add(jefeDePractica);
                                     case "3":
                                         Profesor p = new Profesor();
                                         System.out.print("Facultad que dicta: ");
@@ -91,6 +93,7 @@ public class Main {
                                         p.setAnexo(Integer.parseInt(sc.nextLine()));
                                         System.out.print("Ingrese departamento: ");
                                         p.setDepartamento(sc.nextLine());
+                                        directorioTelefonico.getListaUsuarios().add(p);
                                         break;
                                 }
                             case "2":
@@ -109,13 +112,14 @@ public class Main {
                                 p.setAnexo(Integer.parseInt(sc.nextLine()));
                                 System.out.print("Ingrese departamento: ");
                                 p.setDepartamento(sc.nextLine());
+                                directorioTelefonico.getListaUsuarios().add(p);
                                 break;
                         }
 
                     case "3":
                         break;
                     case "4":
-
+                        System.out.print("Buscar en directorio: ");
                         break;
                     default:
                         System.out.print("Opcion errada!");

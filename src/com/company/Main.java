@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -60,6 +61,31 @@ public class Main {
 
                     }
 
+
+                    try {
+                        int opcion = Integer.parseInt(option);
+                        switch (option) {
+                            case "1":
+
+                                break;
+                            case "2":
+
+                                break;
+                            case "3":
+
+                                break;
+                            case "4":
+
+                                break;
+                            default:
+                                System.out.print("Opcion errada!");
+                                break;
+                        }
+
+                    } catch (InputMismatchException e) {
+                        System.out.print("Ingrese un numero!");
+                        break;
+                    }
             }
         }
     }

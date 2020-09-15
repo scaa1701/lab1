@@ -33,6 +33,10 @@ public class Main {
                                     Instructor u = new Instructor();
                                     System.out.print("Ingrese Ciclo actual (del 1 al 12): ");
                                     u.setCicloActual((Integer.parseInt(sc.nextLine())));
+                                    System.out.print("Ingrese cantidad de cursos que supervisa: ");
+                                    u.setCantidadCursos((Integer.parseInt(sc.nextLine())));
+                                    System.out.print("Ingrese año de inicio: ");
+                                    u.setAñoInicio((Integer.parseInt(sc.nextLine())));
                                     System.out.print("Ingrese Código PUCP: ");
                                     u.setCodigoPucp((Integer.parseInt(sc.nextLine())));
                                     System.out.print("Ingrese nombre: ");
@@ -45,48 +49,98 @@ public class Main {
                                     u.setAnexo(Integer.parseInt(sc.nextLine()));
                                     System.out.print("Ingrese departamento: ");
                                     u.setDepartamento(sc.nextLine());
-
                                     break;
-
-
+                                case "2":
+                                    JefeDePractica jefeDePractica = new JefeDePractica();
+                                    System.out.print("Ingrese año de egreso: ");
+                                    jefeDePractica.setAnioEgreso((Integer.parseInt(sc.nextLine())));
+                                    System.out.print("Ingrese cantidad de cursos que supervisa: ");
+                                    jefeDePractica.setCantidadCursos((Integer.parseInt(sc.nextLine())));
+                                    System.out.print("Ingrese año de inicio: ");
+                                    jefeDePractica.setAñoInicio((Integer.parseInt(sc.nextLine())));
+                                    System.out.print("Ingrese Código PUCP: ");
+                                    jefeDePractica.setCodigoPucp((Integer.parseInt(sc.nextLine())));
+                                    System.out.print("Ingrese nombre: ");
+                                    jefeDePractica.setNombres(sc.nextLine());
+                                    System.out.print("Ingrese apellido: ");
+                                    jefeDePractica.setApellido(sc.nextLine());
+                                    System.out.print("Ingrese telefono: ");
+                                    jefeDePractica.setTelefono(Integer.parseInt(sc.nextLine()));
+                                    System.out.print("Ingrese anexo: ");
+                                    jefeDePractica.setAnexo(Integer.parseInt(sc.nextLine()));
+                                    System.out.print("Ingrese departamento: ");
+                                    jefeDePractica.setDepartamento(sc.nextLine());
+                                case "3":
+                                    Profesor p = new Profesor();
+                                    System.out.print("Facultad que dicta: ");
+                                    p.setFacultad(sc.nextLine());
+                                    System.out.print("Ingrese cantidad de cursos que supervisa: ");
+                                    p.setCantidadCursos((Integer.parseInt(sc.nextLine())));
+                                    System.out.print("Ingrese año de inicio: ");
+                                    p.setAñoInicio((Integer.parseInt(sc.nextLine())));
+                                    System.out.print("Ingrese Código PUCP: ");
+                                    p.setCodigoPucp((Integer.parseInt(sc.nextLine())));
+                                    System.out.print("Ingrese nombre: ");
+                                    p.setNombres(sc.nextLine());
+                                    System.out.print("Ingrese apellido: ");
+                                    p.setApellido(sc.nextLine());
+                                    System.out.print("Ingrese telefono: ");
+                                    p.setTelefono(Integer.parseInt(sc.nextLine()));
+                                    System.out.print("Ingrese anexo: ");
+                                    p.setAnexo(Integer.parseInt(sc.nextLine()));
+                                    System.out.print("Ingrese departamento: ");
+                                    p.setDepartamento(sc.nextLine());
+                                    break;
                             }
-
+                        case "2":
+                            PersonalAdministrativo p = new PersonalAdministrativo();
+                            System.out.print("Cargo que desempeña: ");
+                            p.setCargo(sc.nextLine());
+                            System.out.print("Ingrese Código PUCP: ");
+                            p.setCodigoPucp((Integer.parseInt(sc.nextLine())));
+                            System.out.print("Ingrese nombre: ");
+                            p.setNombres(sc.nextLine());
+                            System.out.print("Ingrese apellido: ");
+                            p.setApellido(sc.nextLine());
+                            System.out.print("Ingrese telefono: ");
+                            p.setTelefono(Integer.parseInt(sc.nextLine()));
+                            System.out.print("Ingrese anexo: ");
+                            p.setAnexo(Integer.parseInt(sc.nextLine()));
+                            System.out.print("Ingrese departamento: ");
+                            p.setDepartamento(sc.nextLine());
                             break;
-                        case "3":
-
-                            break;
-                        case "4":
-
-                            break;
-
                     }
+                case "3":
+                    break;
+                case "4":
+                    break;
+            }
 
+            try {
+                int opcion = Integer.parseInt(option);
+                switch (option) {
+                    case "1":
 
-                    try {
-                        int opcion = Integer.parseInt(option);
-                        switch (option) {
-                            case "1":
-
-                                break;
-                            case "2":
-
-                                break;
-                            case "3":
-
-                                break;
-                            case "4":
-
-                                break;
-                            default:
-                                System.out.print("Opcion errada!");
-                                break;
-                        }
-
-                    } catch (InputMismatchException e) {
-                        System.out.print("Ingrese un numero!");
                         break;
-                    }
+                    case "2":
+
+                        break;
+                    case "3":
+
+                        break;
+                    case "4":
+
+                        break;
+                    default:
+                        System.out.print("Opcion errada!");
+                        break;
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.print("Ingrese un numero!");
+                break;
             }
         }
     }
+}
 }

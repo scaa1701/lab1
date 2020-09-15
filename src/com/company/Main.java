@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -119,7 +120,16 @@ public class Main {
                     case "3":
                         break;
                     case "4":
+                        List<Usuario> lista = directorioTelefonico.getListaUsuarios();
                         System.out.print("Buscar en directorio: ");
+                        String opt = sc.nextLine();
+                        for (Usuario usuario : lista) {
+                            if (usuario.getNombres().equals(opt)) {
+                                System.out.print(usuario);
+                            } else if (usuario.getApellido().equals(opt)) {
+                                System.out.print(usuario);
+                            }
+                        }
                         break;
                     default:
                         System.out.print("Opcion errada!");

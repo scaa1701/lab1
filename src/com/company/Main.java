@@ -6,10 +6,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
-        // write your code here
+	// write your code here
         Scanner sc = new Scanner(System.in);
-        GestorUsuarios gestorUsuarios = new GestorUsuarios();
+        DirectorioTelefonico directorioTelefonico = new DirectorioTelefonico();
 
         while (true) {
             System.out.println("Seleccione una opción:");
@@ -19,74 +18,60 @@ public class Main {
             System.out.println("4. Escribir Directorio");
             System.out.print("Opción: ");
             String option = sc.nextLine();
-            switch (option) {
-                case "1":
-
-                    break;
-                case "2":
-                    System.out.println("Ingrese si es Docente (1) o Personal Administrativo (2): ");
-                    switch (sc.nextLine()) {
-                        case "1":
-                            System.out.println("Ingrese si es Instructor (1), Jefe de Practica (2) o Profesor (3): ");
-                            switch (sc.nextLine()) {
-                                case "1":
-                                    Instructor u = new Instructor();
-                                    System.out.print("Ingrese Ciclo actual (del 1 al 12): ");
-                                    u.setCicloActual((Integer.parseInt(sc.nextLine())));
-                                    System.out.print("Ingrese Código PUCP: ");
-                                    u.setCodigoPucp((Integer.parseInt(sc.nextLine())));
-                                    System.out.print("Ingrese nombre: ");
-                                    u.setNombres(sc.nextLine());
-                                    System.out.print("Ingrese apellido: ");
-                                    u.setApellido(sc.nextLine());
-                                    System.out.print("Ingrese telefono: ");
-                                    u.setTelefono(Integer.parseInt(sc.nextLine()));
-                                    System.out.print("Ingrese anexo: ");
-                                    u.setAnexo(Integer.parseInt(sc.nextLine()));
-                                    System.out.print("Ingrese departamento: ");
-                                    u.setDepartamento(sc.nextLine());
-
-                                    break;
 
 
-                            }
+            try {
+                int opcion = Integer.parseInt(option);
+                switch (option) {
+                    case "1":
 
-                            break;
-                        case "3":
-
-                            break;
-                        case "4":
-
-                            break;
-
-                    }
-
-
-                    try {
-                        int opcion = Integer.parseInt(option);
-                        switch (option) {
+                        break;
+                    case "2":
+                        System.out.println("Ingrese si es Docente (1) o Personal Administrativo (2): ");
+                        switch (sc.nextLine()) {
                             case "1":
+                                System.out.println("Ingrese si es Instructor (1), Jefe de Practica (2) o Profesor (3): ");
+                                switch (sc.nextLine()) {
+                                    case "1":
+                                        Instructor u = new Instructor();
+                                        System.out.print("Ingrese Ciclo actual (del 1 al 12): ");
+                                        u.setCicloActual((Integer.parseInt(sc.nextLine())));
+                                        System.out.print("Ingrese Código PUCP: ");
+                                        u.setCodigoPucp((Integer.parseInt(sc.nextLine())));
+                                        System.out.print("Ingrese nombre: ");
+                                        u.setNombres(sc.nextLine());
+                                        System.out.print("Ingrese apellido: ");
+                                        u.setApellido(sc.nextLine());
+                                        System.out.print("Ingrese telefono: ");
+                                        u.setTelefono(Integer.parseInt(sc.nextLine()));
+                                        System.out.print("Ingrese anexo: ");
+                                        u.setAnexo(Integer.parseInt(sc.nextLine()));
+                                        System.out.print("Ingrese departamento: ");
+                                        u.setDepartamento(sc.nextLine());
 
-                                break;
-                            case "2":
+                                        break;
+
+
+                                }
 
                                 break;
                             case "3":
 
-                                break;
-                            case "4":
-
-                                break;
-                            default:
-                                System.out.print("Opcion errada!");
-                                break;
-                        }
-
-                    } catch (InputMismatchException e) {
-                        System.out.print("Ingrese un numero!");
                         break;
-                    }
+                    case "4":
+
+                        break;
+                    default:
+                        System.out.print("Opcion errada!");
+                        break;
+                }
+
+            }catch (InputMismatchException e){
+                   System.out.print("Ingrese un numero!");
+                    break;
             }
+
+
         }
     }
 }

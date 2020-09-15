@@ -2,15 +2,16 @@ package com.company;
 
 public class Docente extends Usuario{
 
-    private int añoInicio;
+    private int anioInicio;
     private int cantidadCursos;
 
-    public int getAñoInicio() {
-        return añoInicio;
+
+    public int getAnioInicio() {
+        return anioInicio;
     }
 
-    public void setAñoInicio(int añoInicio) {
-        this.añoInicio = añoInicio;
+    public void setAnioInicio(int anioInicio) {
+        this.anioInicio = anioInicio;
     }
 
     public int getCantidadCursos() {
